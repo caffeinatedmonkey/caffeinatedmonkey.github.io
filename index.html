@@ -6,17 +6,27 @@
       <title>I Scream For Ice Cream!</title>
     </head>
    <body>
-        <h1>
-            Most Popular Ice Cream Flavors
-        </h1>
-     <img height = "100px" src = "https://3dprint.com/wp-content/uploads/2015/11/3dp_ten3dpthings_mustache-1024x576.png">
-        <table>
-          <tr><th>Rank</th><th>Flavor</th></tr>
-          <tr><td>1</td><td>Vanilla</td></tr>
-          <tr><td>2</td><td>Strawberry</td></tr>
-          <tr><td>3</td><td>Chocolate</td></tr>
-          <tr><td>4</td><td>Cookies and Cream</td></tr>
-          <tr><td>5</td><td>Min Chocolate Chip</td></tr>
-        </table>
+   
+        <script type="text/javascript">
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var suffix = "AM";
+
+            if (minutes < 10)
+                minutes = "0" + minutes;
+
+            if (hours >= 12) {
+                suffix = "PM";
+                hours = hours - 12;
+            }
+            if (hours == 0) {
+                hours = 12;
+            }
+
+            document.write("<b><div id='d1'>" + hours + ":" + 
+                minutes + " " + suffix + "</div></b>");
+
+        </script>
    </body>
   </html>
